@@ -23,3 +23,23 @@ apply it using the @expression. For example: @component, @injectable
 @injectable has two purposes:
 One is it instructs angular that this class needs a dependency
 Using the providedIn we inform the dependency injection system how to provide the service
+
+Route Guards:
+CanActivate
+CanActivateChild
+CanDeactivate
+Resolve
+CanLoad
+
+JWT authentication workflow: (important)
+user registers -> account is created in backend with hashed and salted password -> return boolean to inform that account is created successfully
+user logs in -> check credentials in backend -> return JWT token if login successful -> receive JWT token on front end and validate it (check if its expired)
+-> if token is valid, then store it in the localStorage and decode it to get user claims (user account info) -> we initialize two behavior subjects, one to track 
+if the user is logged in, another to hold the current user's info -> then in all other components subscribe to these behavior subjects so we can display user data 
+as needed and know if the user is logged in for our route guards -> we use a HTTP interceptor to attach the JWT token to the headers of every request we make to the 
+API after logging in -> API can recognize if user is logged in using JWT token from headers.
+
+Subject vs BehaviorSubject:
+Subjects do not require a start value while behavior subjects do.
+a regular subject can be intialized as null or empty, but behavior subjects require a start up value to initially transmit.
+The reason for this, is that behavior subjects remember the last value they sent out, vs subjects which send out values then forget them.
