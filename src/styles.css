@@ -1,10 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
-html,
-body {
-    height: 100%;
-    background-color: #f9f5f5;
-}
 
 #page-content {
     flex: 1 0 auto;
 }
+
+/* Set the background color */
+html,
+body {
+    height: 100%;
+    background-color: #f9f5f5;
+  }
+  
+  /* Set the font */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Set the color for the text */
+  body {
+    color: #333333;
+  }
+  
+  /* Set the heading color */
+  h1, h2, h3 {
+    color: #555555;
+  }
+  
+  /* Set the color for the links */
+  a {
+    color: #999999;
+  }
+  
+  /* Set the color for the links on hover */
+  a:hover {
+    color: #555555;
+  }
+  
+  /* Set the color for the buttons */
+  button {
+    background-color: #E6E6E6;
+    color: #555555;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Set the color for the buttons on hover */
+  button:hover {
+    background-color: #D9D9D9;
+  }
+  
+  /* Set the color for the icons */
+  i {
+    color: #999999;
+  }
+  
+  /* Set the color for the icons on hover */
+  i:hover {
+    color: #555555;
+  }  
